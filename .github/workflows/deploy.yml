@@ -1,0 +1,36 @@
+name: Deploy static site
+
+on:
+  push:
+    # trigger build when changes land on the branch you deploy from
+    # for a user site you may be using `master`, but the build step runs
+    # before the export, so this should match whichever branch you commit
+    # source updates to (commonly `main` or `master`).
+    branches: [main]   # change to master or gh-pages if you follow a different flow
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      - run: pnpm install
+
+      - run: pnpm build
+
+      - run: pnpm export
+
+      - name: Deploy to Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          # The repo is a user site; Pages serves from the root of the branch.
+          # To push the exported files directly onto master/main, uncomment below:
+          publish_branch: master
