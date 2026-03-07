@@ -6,7 +6,7 @@ on:
     # for a user site you may be using `master`, but the build step runs
     # before the export, so this should match whichever branch you commit
     # source updates to (commonly `main` or `master`).
-    branches: [main]   # change to master or gh-pages if you follow a different flow
+    branches: [master]   # change to master or gh-pages if you follow a different flow
 
 jobs:
   build:
@@ -33,4 +33,4 @@ jobs:
           publish_dir: ./out
           # The repo is a user site; Pages serves from the root of the branch.
           # To push the exported files directly onto master/main, uncomment below:
-          publish_branch: master
+          publish_branch: gh-pages
