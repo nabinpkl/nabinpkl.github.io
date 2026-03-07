@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: '%s | Nabin Pokhrel',
   },
   description:
-    'Personal portfolio for Nabin Pokhrel, built with Next.js and ready for static deployment.',
+    'Software engineer portfolio for Nabin Pokhrel, highlighting full-stack development, backend systems, and engineering experience.',
   applicationName: 'Nabin Pokhrel Portfolio',
   manifest: '/manifest.json',
   alternates: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Nabin Pokhrel',
     description:
-      'A clean Next.js portfolio for showcasing projects, skills, and experience.',
+      'Portfolio site for a software engineer with 4+ years of experience in full-stack, backend, and cloud-focused product development.',
     url: siteUrl,
     siteName: 'Nabin Pokhrel Portfolio',
     type: 'website',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Nabin Pokhrel',
     description:
-      'A clean Next.js portfolio for showcasing projects, skills, and experience.',
+      'Software engineer portfolio covering skills, experience, education, and product delivery work.',
   },
 };
 
